@@ -19,3 +19,6 @@
     -> Gelen randevuları kontrol etme
 -   Admin Yönetim Sayfaları
     -> Blog yazıları edit
+
+
+https://devdojo.com/bobbyiliev/8-awesome-vs-code-extensions-for-laravel-developers
