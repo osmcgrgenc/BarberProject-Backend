@@ -1,141 +1,80 @@
- 
+<!--
+=========================================================
+ Paper Dashboard - v2.0.0
+=========================================================
+
+ Product Page: https://www.creative-tim.com/product/paper-dashboard
+ Copyright 2019 Creative Tim (https://www.creative-tim.com)
+ UPDIVISION (https://updivision.com)
+ Licensed under MIT (https://github.com/creativetimofficial/paper-dashboard/blob/master/LICENSE)
+
+ Coded by Creative Tim
+
+=========================================================
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
+
+
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
-<head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Berber Bul</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-        body {
-            padding: 0 50px;
-            background-color: rgba(68, 68, 68, 0.6);
-        }
+    <head>
+        <meta charset="utf-8" />
+        <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/apple-icon.png">
+        <link rel="icon" type="image/png" href="/assets/img/favicon.png">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-        .container {
-            display: flex;
-        }
+        <!-- Extra details for Live View on GitHub Pages -->
 
-        .container .section {
-            flex: 1;
-            /*grow*/
-            align-items: center;
-            display: flex;
-            justify-content: center;
-        }
+        <title>
+            {{ __('Paper Dashboard by Creative Tim') }}
+        </title>
+        <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no'
+            name='viewport' />
+        <!--     Fonts and icons     -->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+        <!-- CSS Files -->
+        <link href="/assets/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="/assets/css/paper-dashboard.css?v=2.0.0" rel="stylesheet" />
+        <!-- CSS Just for demo purpose, don't include it in your project -->
+        <link href="/assets/demo/demo.css" rel="stylesheet" />
 
-        header h1.logo {
-            margin: 7px 0 0 0;
-            float: left;
-        }
+    </head>
 
-        header h1.logo a {
+    <body class="{{ $class }}">
 
-            width: 250px;
-            height: 49px;
-            display: block;
-            background: url(https://marka-logo.com/wp-content/uploads/2020/04/Huawei-Logo.png) no-repeat 0 0;
-            background-size: contain;
-            /* the old way was including text-indent: -9999px; but the new way is as seen below */
+        @auth()
+        @include('layouts.page_templates.auth')
+        @include('layouts.navbars.fixed-plugin')
+        @endauth
 
-            font: 0/0 a;
-            text-shadow: none;
-            color: transparent;
+        @guest
+        @include('layouts.page_templates.guest')
+        @endguest
 
-        }
+        <!--   Core JS Files   -->
+        <script src="/assets/js/core/jquery.min.js"></script>
+        <script src="/assets/js/core/popper.min.js"></script>
+        <script src="/assets/js/core/bootstrap.min.js"></script>
+        <script src="/assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+        <!--  Google Maps Plugin    -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+        <!-- Chart JS -->
+        <script src="/assets/js/plugins/chartjs.min.js"></script>
+        <!--  Notifications Plugin    -->
+        <script src="/assets/js/plugins/bootstrap-notify.js"></script>
+        <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
+        <script src="/assets/js/paper-dashboard.min.js?v=2.0.0" type="text/javascript"></script>
+        <!-- Paper Dashboard DEMO methods, don't include it in your project! -->
+        <script src="/assets/demo/demo.js"></script>
+        <!-- Sharrre libray -->
+        <script src="../assets/demo/jquery.sharrre.js"></script>
 
-        @media (max-width: 768px) {
+        @stack('scripts')
 
-            /*breakpoint*/
-            .container {
-                flex-direction: column;
-            }
-        }
-
-        .shadow-out {
-            margin: 10px 0;
-            padding: 5px;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.55);
-            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-            backdrop-filter: blur(4px);
-            -webkit-backdrop-filter: blur(4px);
-            border-radius: 10px;
-            border: 1px solid rgba(255, 255, 255, 0.18);
-        }
-
-        /* Style the navigation bar */
-        .navbar {
-            width: auto;
-            background-color: #555;
-            overflow: auto;
-            border-radius: 10px;
-        }
-
-        /* Navbar links */
-        .navbar a {
-            float: left;
-            text-align: center;
-            padding: 12px;
-            color: white;
-            text-decoration: none;
-            font-size: 17px;
-        }
-
-        /* Navbar links on mouse-over */
-        .navbar a:hover {
-            background-color: #000;
-        }
-
-        /* Current/active navbar link */
-        .active {
-            background-color: #4CAF50;
-        }
-
-        /* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less
-        than 500 pixels */
-        @media screen and (max-width: 500px) {
-            .navbar a {
-                float: none;
-                display: block;
-            }
-        }
-    </style>
-</head>
-
-<body>
-    <header class="shadow-out">
-        <div class="container">
-            <div class="section" style="justify-content: flex-start;">
-                <div class="navbar">
-                    <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
-                    <a href="#"><i class="fa fa-fw fa-search"></i> Search</a>
-                    <a href="#"><i class="fa fa-fw fa-envelope"></i> Contact</a>
-
-                </div>
-            </div>
-            <div class="section">
-                <h1 class="logo"><a href="">Magazine</a></h1>
-            </div>
-            <div class="section" style="justify-content: flex-end;">
-                <div class="navbar">
-
-                    <a href="#"><i class="fa fa-fw fa-user"></i> Login</a>
-                </div>
-            </div>
-        </div>
-    </header>
-    @yield('content')
-
-    <footer class="shadow-out">
-        <div class="container">
-            <div class="section">1</div>
-            <div class="section">2</div>
-            <div class="section">3</div>
-        </div>
-    </footer>
-</body>
+        @include('layouts.navbars.fixed-plugin-js')
+    </body>
 
 </html>
