@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\TodosController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,3 +20,4 @@ Route::get('/', function () {
 Route::get('/heroku', function () {
     return view('welcome');
 });
+Route::resource('todos', TodosController::class);

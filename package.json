@@ -10,9 +10,14 @@
         "production": "mix --production"
     },
     "devDependencies": {
-        "axios": "^0.21",
+        "axios": "0.21.1",
         "laravel-mix": "^6.0.6",
         "lodash": "^4.17.19",
         "postcss": "^8.1.14"
+    },
+    "dependencies": {
+        "@react-native-community/masked-view": "0.1.10",
+        "react-native-elements": "3.3.2",
+        "react-navigation-stack": "2.10.4"
     }
 }
