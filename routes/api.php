@@ -17,3 +17,15 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+Route::get('/todos', function () {
+    return "todos";
+});
+Route::get('/todos/{id}', function ($id) {
+    return $id;
+});
+Route::post('/todos', function () {
+    return "todos";
+});
+Route::delete('/todos/{id}', function ($id) {
+    return $id;
+});
