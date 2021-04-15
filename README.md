@@ -33,7 +33,7 @@ Yapılacaklar
 
 [VsCode Extension for laravel](https://devdojo.com/bobbyiliev/8-awesome-vs-code-extensions-for-laravel-developers)
 
-[Eklenecek](#)
+[Heroku Ön İzleme](#)
 [Eklenecek](#)
 [Eklenecek](#)
 [Eklenecek](#)
