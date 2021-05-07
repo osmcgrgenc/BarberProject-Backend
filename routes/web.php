@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\DistrictController;
 use App\Http\Controllers\TodosController;
+use App\Http\Controllers\WordListController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,3 +23,5 @@ Route::get('/heroku', function () {
     return view('welcome');
 });
 Route::resource('todos', TodosController::class);
+Route::resource('districts', DistrictController::class);
+Route::resource('words', WordListController::class);

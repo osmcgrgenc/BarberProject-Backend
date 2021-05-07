@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\District;
+use App\Models\WordList;
 use Illuminate\Http\Request;
 
-class DistrictController extends Controller
+class WordListController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +15,6 @@ class DistrictController extends Controller
     public function index()
     {
         //
-        return District::all();
     }
 
     /**
@@ -42,10 +41,10 @@ class DistrictController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\District  $district
+     * @param  \App\Models\WordList  $wordList
      * @return \Illuminate\Http\Response
      */
-    public function show(District $district)
+    public function show(WordList $wordList)
     {
         //
     }
@@ -53,10 +52,10 @@ class DistrictController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\District  $district
+     * @param  \App\Models\WordList  $wordList
      * @return \Illuminate\Http\Response
      */
-    public function edit(District $district)
+    public function edit(WordList $wordList)
     {
         //
     }
@@ -65,10 +64,10 @@ class DistrictController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\District  $district
+     * @param  \App\Models\WordList  $wordList
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, District $district)
+    public function update(Request $request, WordList $wordList)
     {
         //
     }
@@ -76,10 +75,10 @@ class DistrictController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\District  $district
+     * @param  \App\Models\WordList  $wordList
      * @return \Illuminate\Http\Response
      */
-    public function destroy(District $district)
+    public function destroy(WordList $wordList)
     {
         //
     }
