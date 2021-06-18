@@ -1,7 +1,7 @@
 {
-  "name": "Berber Bul",
+  "name": "PortakalBackend",
   "version": "1.0.0",
-  "description": "berber-bul",
+  "description": "Node, expressjs, objection, socket.io ile verileri kolayca sakla",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
@@ -17,7 +17,7 @@
     "type": "git",
     "url": "git+https://github.com/osmcgrgenc/BarberProject-Backend.git"
   },
-  "author": "",
+  "author": "Osman Cagri GENC",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/osmcgrgenc/BarberProject-Backend/issues"
