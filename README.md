@@ -1,11 +1,11 @@
 # Node Js Backend Api Projesi
 
 ## Kullanılan teknolojiler
-- [Node](https://link)
-- [Objection](https://link)
-- [Expressjs](https://link)
-- [PostgreSql](https://link)
-- [Heroku](https://link)
+- [Node](https://nodejs.org/en/)
+- [Objection](https://vincit.github.io/objection.js/)
+- [Expressjs](https://expressjs.com)
+- [PostgreSql](https://www.npmjs.com/package/pg)
+- [Heroku](http://heroku.com)
 
 ## Geliştirme
 1. `npm install`
