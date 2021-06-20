@@ -5,6 +5,7 @@ const districtsController = require("../controller/districts");
 
 const router = express.Router();
 // TODO move implementation to controller and service layer
+router.get("/", (req, res, next) => { res.send("API RUN")});
 router.get("/user/:id", userController.getUser);
 router.get("/city/:id", citiesController.getcities);
 router.get("/district/:id", districtsController.getdistricts);
