@@ -9,5 +9,4 @@ setupDb();
 const app = express();
 app.use(express.json());
 app.use(router);
-http.createServer(app).listen(80, () => console.log('server is running on port 80'));
-https.createServer(app).listen(443, () => console.log('server is running on port 443'));
+http.createServer(app).listen(4000, () => console.log('server is running on port 80'));
